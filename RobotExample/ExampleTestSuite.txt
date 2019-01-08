@@ -32,7 +32,7 @@ Test4Tags
     Open Browser    http://google.com    chrome
     Close Browser
     Log To Console    Test 4Tags Completed
-    Set Tags    Sanity
+    Set Tags    Smoke
 
 Test5
     [Tags]    Test5    Sanity    Confidence
