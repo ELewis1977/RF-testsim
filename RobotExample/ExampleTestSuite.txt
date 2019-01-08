@@ -1,6 +1,6 @@
 *** Settings ***
-Suite Setup       GoToHomePage
-Suite Teardown    Close All Browsers
+Test Setup        GoToHomePage
+Test Teardown     Close All Browsers
 Library           SeleniumLibrary
 Resource          CommonFunctions.robot
 
@@ -10,31 +10,29 @@ Resource          CommonFunctions.robot
 *** Test Cases ***
 TestCase1
     [Tags]    Test1
-    Open Browser    http://robotframework.org/SeleniumLibrary/    chrome
-    Close Browser
+    Comment    Open Browser    http://robotframework.org/SeleniumLibrary/    chrome
+    Comment    Close Browser
     Log To Console    Completed Successfully
 
 ExampleTest2
     [Tags]    Test2
-    Open Browser    ${TrainingPeaksLoginURL}    chrome
+    Comment    Open Browser    ${TrainingPeaksLoginURL}    chrome
     Input Text    id=Username    &{UsernamePassword}[username]
     Input Password    id=Password    &{UsernamePassword}[password]
     Click Button    id=btnSubmit
-    Close Browser
+    Comment    Close Browser
 
 Example3UserKeyword
     [Tags]    Test3
-    [Setup]    Log To Console    Test Case Started
     LoginParams    userName=&{UsernamePassword}[username]    Password=&{UsernamePassword}[password]
-    [Teardown]    Log To Console    Test Case Completed
 
 Test4Tags
     [Tags]    Test4    Sanity
     Log To Console    Test4 Tags Starts
-    Open Browser    http://google.com
-    Close All Browsers
+    Open Browser    http://google.com    chrome
+    Close Browser
     Log To Console    Test 4Tags Completed
-    Set Tags    Smoke | Load | Stress
+    Set Tags    Smoke
 
 Test5
     [Tags]    Test5    Sanity    Confidence
