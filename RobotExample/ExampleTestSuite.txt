@@ -32,8 +32,8 @@ Test4Tags
     Open Browser    http://google.com    chrome
     Close Browser
     Log To Console    Test 4Tags Completed
-    Set Tags    Smokey
+    Set Tags    Bandits
 
 Test5
     [Tags]    Test5    Sanity    Confidence
-    Log To Consol    Test5 Started
+    Log To Console    Test5 Started
