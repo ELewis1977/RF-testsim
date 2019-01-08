@@ -17,4 +17,4 @@ LoginParams
     Click Button    id=btnSubmit
 
 GoToHomePage
-    Open Browser    ${TrainingPeaksLoginURL}    chrome
+    Open Browser    ${TrainingPeaksLoginURL}    ${browser}
