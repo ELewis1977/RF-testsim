@@ -38,4 +38,4 @@ Test4Tags
 
 Test5
     [Tags]    Test5    Sanity    Confidence
-    Log To Consol    Test5 Started
+    Log To Console    Test5 Started
