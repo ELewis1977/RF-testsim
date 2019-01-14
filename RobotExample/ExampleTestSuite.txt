@@ -29,7 +29,9 @@ Example3UserKeyword
 Test4Tags
     [Tags]    Test4    Sanity
     Log To Console    Test4 Tags Starts
-    Open Browser    http://google.com    chrome
+    Run Keyword If    "${browser}"=="chrome"    Open Browser    http://google.com    chrome
+    Run Keyword If    "${browser}"=="firefox"    Open Browser    http://nufc.com    firefox
+    Run Keyword If    "${browser}"=="ie"    Open Browser    http://bbc.co.uk    ie
     Close Browser
     Log To Console    Test 4Tags Completed
     Set Tags    Bandits
