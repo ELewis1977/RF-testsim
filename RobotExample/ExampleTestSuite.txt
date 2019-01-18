@@ -3,6 +3,7 @@ Test Setup        GoToHomePage
 Test Teardown     Close All Browsers
 Library           SeleniumLibrary
 Resource          CommonFunctions.robot
+Library           DateTime
 
 *** Variables ***
 &{UsernamePassword}    username=ELewis1977    password=1ronMan!
@@ -35,7 +36,19 @@ Test4Tags
     Close Browser
     Log To Console    Test 4Tags Completed
     Set Tags    Bandits
+    ${/}
 
 Test5
     [Tags]    Test5    Sanity    Confidence
     Log To Console    Test5 Started
+
+AddEventToCurrentDate
+    [Tags]    Date
+    LoginParams    userName=&{UsernamePassword}[username]    Password=&{UsernamePassword}[password]
+    ${today}    Get Current Date
+    Log To Console    ${today}
+    Sleep    15
+    Click Element    css:label.home
+    Click Element    css:label.calendar
+    Click Element    css:button.goToLastWeekButton
+    Sleep    15
