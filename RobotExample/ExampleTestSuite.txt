@@ -36,7 +36,6 @@ Test4Tags
     Close Browser
     Log To Console    Test 4Tags Completed
     Set Tags    Bandits
-    ${/}
 
 Test5
     [Tags]    Test5    Sanity    Confidence
